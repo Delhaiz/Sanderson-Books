@@ -9,7 +9,7 @@ html {
     color: black;
   }
   
-  .container {
+  .content {
     max-width: 1080px;
     margin: auto;
   }
@@ -33,7 +33,7 @@ html {
     padding-right: 2rem;
   }
   
-  .nav-link-text {
+  .nav-link-content {
     color: black;
     text-transform: uppercase;
     text-decoration:none;
@@ -41,7 +41,7 @@ html {
     transition: color 0.5s ease;
   }
   
-  .nav-link-text:hover {
+  .nav-link-content:hover {
     color: #2596be;
     text-shadow: 0 0 2rem #2596be; 
     transition: text-shadow 0.5s ease;
