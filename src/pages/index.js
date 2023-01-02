@@ -10,7 +10,9 @@ import {
   homeImage,
   callToAction,
   homeTitle,
-  featuredBooks
+  featuredBooks,
+  featuredBooksTitle,
+  singleBook
 } from './page.module.css'
 
 const IndexPage = ({
@@ -41,13 +43,13 @@ const IndexPage = ({
         </div>
       </section>
       <section>
-          <h2>Featured Books</h2>
+          <h2 className={featuredBooksTitle}>Featured Books</h2>
           <p>
             Here are some of our featured books by Brandon Sanderson. 
           </p>
           <div className={featuredBooks}>
             {homeFields.featuredBooks.map(book => {
-              return <Book slug={`books/${book.slug}`} key={book.id} book={book}/>
+              return <div className={singleBook}><Book slug={`books/${book.slug}`} key={book.id} book={book}/></div>
             })}
           </div>
         </section>
