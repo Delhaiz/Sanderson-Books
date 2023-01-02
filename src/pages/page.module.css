@@ -1,0 +1,51 @@
+/* homepage styling */
+.homeSection{
+    display: flex;
+    justify-content:space-between;
+}
+
+.homeArticle{
+    width: 50%;
+}
+
+.homeImage{
+width: 15rem;
+height: auto;
+margin-right: 8%;
+}
+
+.callToAction{
+    text-decoration: none;
+    color: white;
+    background-color: #2596be;
+    padding: 0.8rem;
+    border-radius: 20px;
+    width: 7rem;
+    text-align: center;
+    display: block;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.callToAction:hover{
+    background-color: white;
+    color: black;
+    border-color: #2596be;
+    border-style: solid;
+    border-width: 0.01rem;
+    
+    
+}
+
+.homeTitle{
+    font-size: 30pt;
+    text-transform: uppercase;
+}
+
+.featuredBooks{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
