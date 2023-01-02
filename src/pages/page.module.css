@@ -81,3 +81,58 @@
     flex-wrap: wrap;
     flex-basis: 33.333333%;
 }
+.booksTitle{
+    text-transform: uppercase;
+}
+
+/* single book page styling */
+
+.singleBookContent{
+    display: flex;
+    justify-content: space-around;
+}
+.singelBookImage{
+    width: 200%;
+    margin-left: 13rem;
+    margin-top: 4rem;
+}
+.singelBookTitle{
+    text-transform: uppercase;
+}
+.singleBookGenres{
+    margin-left: 2rem;
+}
+
+/* about us page styling*/
+
+.aboutTitles{
+    text-transform: uppercase;
+}
+
+.writerImage{
+    border-radius: 50%;
+    height: 25rem;
+    width: 25rem;
+    margin-top: -2rem;
+}
+.aboutImage{
+    height: 40%;
+    width: 40%;
+    margin-top: 1rem;
+    margin-right: 6rem;
+}
+
+.aboutSection{
+    display: flex;
+    justify-content: space-between;
+}
+.aboutSection article{
+    width: 60%;
+}
+.missionSection{
+    display: flex;
+    justify-content: space-between;
+}
+.missionSection article{
+    width: 50%;
+}

@@ -6,7 +6,8 @@ import {
   feruchemyImage,
   titleSection,
   booksList,
-  singleBook
+  singleBook,
+  booksTitle
 } from '../page.module.css'
 import Book from '../../components/book'
 
@@ -17,7 +18,7 @@ const BooksPage = ({data: {
   const image = getImage(booksFields.picture.localFile);
   return (
     <Layout pageTitle="Books of Brandon Sanderson">
-      <h2>{booksFields.title}</h2>
+      <h2 className={booksTitle}>{booksFields.title}</h2>
       <section className={titleSection}>
         <p>{booksFields.description}</p>
         <GatsbyImage

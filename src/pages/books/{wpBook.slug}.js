@@ -2,22 +2,37 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
-
-const BookPage = ({data: {wpBook: {bookFields: book}}}) => {
+import {
+  singleBookContent,
+  singelBookImage,
+  singelBookTitle,
+  singleBookGenres
+} from '../page.module.css'
+const BookPage = ({data: {
+  wpBook: {
+    bookFields: book,
+    subgenres: {nodes: subGenres}
+  }},
+}) => {
   const image = getImage(book.coverImage.localFile);
   return (
     <Layout pageTitle="Book Template">
-    <div>
-      <h1>{book.title}</h1>
-      <h3>{book.bookSeries}</h3>
-      <GatsbyImage image={image} alt={book.coverImage.altText}/>
-      <h3>{/*subgenres?*/}</h3>
-      <p>Genres: {book.genre.map((genre) => <div>{genre}</div>)}</p>
+    <div className={singleBookContent}>
+      <div>
+      <h1 className={singelBookTitle}>{book.title}</h1>
+      <h3 className={singelBookTitle}>{book.bookSeries}</h3>
       <div dangerouslySetInnerHTML={{__html: book.summary}} />
-      <p>Rating: {book.rating}</p>
-      <p>Publish Year: {book.publishYear}</p>
-      <p>Page Count: {book.pageCount}</p>
-      <p>Language: {book.language}</p>
+      </div>
+      <div className={singelBookImage}>
+      <GatsbyImage image={image} alt={book.coverImage.altText}/>
+      <p><b>GENRES:</b> {book.genre.map((genre) => <div className={singleBookGenres}>{genre}</div>)}</p>
+      <p><b>SUBGENRES:</b> {subGenres.map((subGenre) => <div className={singleBookGenres}>{subGenre.name}</div>)}</p>
+      <p><b>RATING:</b> {book.rating}</p>
+      <p><b>PUBLISH YEAR:</b> {book.publishYear}</p>
+      <p><b>PAGE COUNT:</b> {book.pageCount}</p>
+      <p><b>LANGUAGE:</b> {book.language}</p>
+      <p><b>ISBN NUMBER:</b> {book.isbnNumber}</p>
+      </div>
     </div>
     </Layout>
   )
