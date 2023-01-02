@@ -1,0 +1,52 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    font-size: 13pt;
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.instagram{
+    background-image: url('../images/icons8-instagram-30.png');
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+}
+.twitter{
+    background-image: url('../images/icons8-twitter-30.png');
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+}
+.facebook{
+    background-image: url('../images/icons8-facebook-circled-30.png');
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+}
+.facebook:hover, .instagram:hover, .twitter:hover{
+    transform: scale(1.5);
+    transition: transform 0.2s ease;
+}
+
+.rightSection{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.leftSection{
+    margin-top: 1rem;
+}
+.leftSection p{
+    margin: 0;
+}

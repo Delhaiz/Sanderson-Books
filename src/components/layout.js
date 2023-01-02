@@ -9,6 +9,7 @@ import {
   siteTitle ,
   mainContent
 } from './layout.module.css'
+import Footer from './footer';
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -18,10 +19,21 @@ const Layout = ({ pageTitle, children }) => {
           title
         }
       }
+      wpPage(slug: {eq: "contact"}) {
+        contactUsFields {
+          address
+          city
+          zipCode
+          facebook
+          twitter
+          instagram
+        }
+      }  
     }
-  `)
+  `);
 
   return (
+    <>
     <div className={content}>
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       <nav className={nav}>
@@ -52,6 +64,11 @@ const Layout = ({ pageTitle, children }) => {
         {children}
       </main>
     </div>
+    <Footer
+      siteTitle={data.site.siteMetadata.title}
+      creatorInfo={data.wpPage.contactUsFields}
+    />
+    </>
   )
 }
 
