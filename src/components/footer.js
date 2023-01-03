@@ -1,3 +1,4 @@
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
 import {
     footer,
@@ -7,10 +8,12 @@ import {
     facebook,
     links,
     rightSection,
-    leftSection
+    leftSection,
+    footerImage
 } from './footer.module.css'
 
 const Footer = ({ siteTitle, creatorInfo }) => {
+  const image = getImage(creatorInfo.picture.localFile);
   return (
     <footer className={footer}>
       <section className={leftSection}>
@@ -18,6 +21,12 @@ const Footer = ({ siteTitle, creatorInfo }) => {
         <p>Jonas Vael</p>
         <p>All rights reserved.</p>
       </section>
+      <div className={footerImage}>
+          <GatsbyImage
+            image={image}
+            alt={creatorInfo.picture.altText}
+          />
+        </div>
       <section className={rightSection}>
         <p>{`${creatorInfo.address}, ${creatorInfo.zipCode} ${creatorInfo.city}`}</p>
         <div className={links}>

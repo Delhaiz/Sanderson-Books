@@ -50,3 +50,8 @@
 .leftSection p{
     margin: 0;
 }
+.footerImage{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 40px;
+}

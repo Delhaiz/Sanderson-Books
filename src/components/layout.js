@@ -27,6 +27,14 @@ const Layout = ({ pageTitle, children }) => {
           facebook
           twitter
           instagram
+          picture {
+            altText
+            localFile {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+          }
         }
       }  
     }
