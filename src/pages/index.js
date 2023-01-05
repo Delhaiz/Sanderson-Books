@@ -31,7 +31,7 @@ const IndexPage = ({
               __html: homeFields.description,
             }}
           />
-          <a target="__blank" href={homeFields.callToAction.url} className={callToAction}>
+          <a target="_self" href={homeFields.callToAction.url} className={callToAction}>
             {homeFields.callToAction.title}
           </a>
         </article>
