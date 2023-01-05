@@ -82,6 +82,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     flex-basis: 33.333333%;
+    margin-bottom: 20px;
 }
 .booksTitle{
     text-transform: uppercase;
@@ -140,6 +141,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 .missionSection article{
     width: 50%;
@@ -199,6 +201,7 @@
 .contactImage{
     margin-left: 150px;
     width: 250px;
+    margin-bottom: 18px;
 
 }
 
@@ -216,6 +219,7 @@
 .form{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .form form{
