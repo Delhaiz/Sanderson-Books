@@ -1,3 +1,6 @@
+.featuredBookImage{
+    transition: transform 0.2s ease;
+}
 .featuredBookImage :hover {
-    
+    transform: scale(1.0);
 }
