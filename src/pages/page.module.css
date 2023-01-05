@@ -146,3 +146,70 @@
 .missionSection article{
     width: 50%;
 }
+
+/* Contact page styling */
+
+.contactSection{
+    display: flex;
+}
+
+.contactSection article{
+    width: 50%;
+}
+
+.contactSection article h2{
+    text-transform: uppercase;
+    font-size: 30pt;
+}
+
+.contactSection article a{
+    text-decoration: none;
+    color: #2596be;
+}
+.contactSection article a:hover{
+    text-decoration: underline;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.instagram{
+    background-image: url('../images/icons8-instagram-30.png');
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+}
+.twitter{
+    background-image: url('../images/icons8-twitter-30.png');
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+}
+.facebook{
+    background-image: url('../images/icons8-facebook-circled-30.png');
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+}
+.facebook:hover, .instagram:hover, .twitter:hover{
+    transform: scale(1.5);
+    transition: transform 0.2s ease;
+}
+
+.contactImage{
+    margin-left: 150px;
+    width: 250px;
+
+}
+
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactEmail{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
