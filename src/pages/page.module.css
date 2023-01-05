@@ -89,6 +89,10 @@
     text-transform: uppercase;
 }
 
+.titleSection{
+    margin-top: 50px;
+}
+
 /* single book page styling */
 
 .singleBookContent{
@@ -132,10 +136,12 @@
 }
 .aboutSection article{
     width: 60%;
+    margin-top: 50px;
 }
 .missionSection{
     display: flex;
     justify-content: space-between;
+    margin-top: 50px;
 }
 .missionSection article{
     width: 50%;

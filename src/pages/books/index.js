@@ -18,9 +18,11 @@ const BooksPage = ({data: {
   const image = getImage(booksFields.picture.localFile);
   return (
     <Layout pageTitle="Books of Brandon Sanderson">
-      <h2 className={booksTitle}>{booksFields.title}</h2>
       <section className={titleSection}>
-        <p>{booksFields.description}</p>
+        <article>
+          <h2 className={booksTitle}>{booksFields.title}</h2>
+          <div dangerouslySetInnerHTML={{__html: booksFields.description}}/>
+        </article>
         <GatsbyImage
         image={image}
         alt={booksFields.picture.altText}
